@@ -17,6 +17,8 @@ use App\Http\Controllers\CrudController;
 // Route::get('/', function () {
 //      return view('admin');
 // });
+
+//crud tabel product
 Route::get('/',[CrudController::class,'index']);
 Route::get('/create',[CrudController::class,'create']);
 Route::get('/store',[CrudController::class,'store']);
@@ -24,3 +26,8 @@ Route::get('/read',[CrudController::class,'read']);
 Route::get('/show/{id}',[CrudController::class,'show']);
 Route::get('/update/{id}',[CrudController::class,'update']);
 Route::get('/destroy/{id}',[CrudController::class,'destroy']);
+//crud tabel kategori
+
+//crud tabel tipe
+
+//crud tabel alur

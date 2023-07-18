@@ -131,7 +131,7 @@
         $("#page").html(data);
         $("#exampleModal").modal('show');
         $("#error").html(data);
-    
+        
     });
 
     

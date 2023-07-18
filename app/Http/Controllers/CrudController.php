@@ -20,7 +20,7 @@ class CrudController extends Controller
     public function read()
     {
         $data = M_Crud::all(); //fetch semua data dari model tabel
-        return view('read')->with([
+        return view('product.read')->with([
             'data' => $data
         ]); //dieksekusi akan menampilkan halaman read dan mengirim variabel data sebagai parameter data
 
@@ -33,7 +33,7 @@ class CrudController extends Controller
      */
     public function create()
     {
-        return view('create'); //tampil data halaman create
+        return view('product.create'); //tampil data halaman create
     }
 
     /**
@@ -61,7 +61,7 @@ class CrudController extends Controller
     public function show($id)
     {
         $data = M_Crud::findOrFail($id);
-        return view('edit')->with([
+        return view('product.edit')->with([
             'data' => $data
         ]);
     }

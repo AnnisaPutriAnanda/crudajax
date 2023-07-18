@@ -19,13 +19,19 @@ use App\Http\Controllers\CrudController;
 // });
 
 //crud tabel product
+
 Route::get('/',[CrudController::class,'index']);
+
+Route::prefix('/')->group(function(){
+
 Route::get('/create',[CrudController::class,'create']);
 Route::get('/store',[CrudController::class,'store']);
 Route::get('/read',[CrudController::class,'read']);
 Route::get('/show/{id}',[CrudController::class,'show']);
 Route::get('/update/{id}',[CrudController::class,'update']);
 Route::get('/destroy/{id}',[CrudController::class,'destroy']);
+
+});
 //crud tabel kategori
 
 //crud tabel tipe

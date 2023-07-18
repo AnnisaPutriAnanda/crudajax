@@ -115,16 +115,13 @@
   $(document).ready(function(){
         read();           
   }); 
-            
-  
+
   function read(){
     $.get("{{url('read')}}", {}, function(data, status){
         $("#read").html(data);
     });
-  }
 
-  
-  function create(){
+  }function create(){
 
     $.get("{{url('create')}}", {}, function(data, status){
         $("#exampleModalLabel").html("Tambahkan Data");
@@ -133,8 +130,7 @@
         $("#error").html(data);
         
     });
-
-    
+ 
   } function store(){
          var name= { 
           'name': $("#name").val(),
@@ -150,22 +146,19 @@
          title: 'Your work has been saved',
          showConfirmButton: false,
          timer: 1500
-})
-
-
+              })
                 $(".btn-close").click();
                 // $("#page").html()
                 read();}
          });
-  }
-    
-  function show(id){
+
+  }function show(id){
+
     $.get("{{url('show')}}/" + id, {}, function(data, status){
         $("#exampleModalLabel").html("Edit Data");
         $("#page").html(data);
         $("#exampleModal").modal('show');
     });
-    
     
   }function update(id){
          var name= { 
